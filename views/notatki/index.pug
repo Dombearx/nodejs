@@ -1,0 +1,19 @@
+html 
+    head
+        title Notatkor
+    body
+        h1 Notatkor
+        form(action="/notatki" method="post")
+            textarea(rows="5" cols="50" name="tekst")
+            br
+            input(type="submit" value="Dodaj notatkę")
+        form(action="/notatki/pokaz" method="get")
+            input(type="submit" value="Pokaż notatki")
+        if nazwa
+            div Witaj: #{nazwa}
+        if tekst 
+            div Notatka: #{tekst}.
+        if data
+            div Data: #{data}
+        if notatki
+            div #{notatki}

@@ -1,0 +1,10 @@
+html 
+    head
+        title My library
+    body
+        h1 Welcome to my library
+        form(action="/book" method="get")
+            input(type="text" name="name")
+            input(type="submit" value="Read")
+        if name 
+            div You're reading #{name}.
