@@ -12,8 +12,15 @@ html
         if nazwa
             div Witaj: #{nazwa}
         if tekst 
+            div Dodano następującą notatkę:  
+            br
             div Notatka: #{tekst}.
         if data
             div Data: #{data}
         if notatki
-            div #{notatki}
+            each notatka in notatki
+                ul
+                    li
+                        div Notatka: #{notatka.tekst}
+                    li
+                        div Data: #{notatka.data}
